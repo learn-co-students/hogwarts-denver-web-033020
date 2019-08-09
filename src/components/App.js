@@ -53,9 +53,7 @@ class App extends Component {
     switch (this.state.sortBy) {
       case "weight":
         return previouslyFiltered.sort((a, b) => {
-          const weight =
-            "weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water";
-          return a[weight] - b[weight];
+          return a.weight - b.weight;
         });
       case "name":
         return previouslyFiltered.sort((a, b) => {
